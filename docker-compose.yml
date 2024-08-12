@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: django_web
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - db_data:/data
+    # Depend on the db service if needed (for other DB types)
+    # depends_on:
+    #   - db
+
+volumes:
+  db_data:
