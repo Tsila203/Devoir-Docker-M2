@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2 class = 'text-center mt-4'>--- Detail Article ---</h2>
+  <h3>{{article.title}}</h3>
+  <img src= "{{article.image.url}}">
+  <p> {{article.category}}</p>
+{% endblock%}
