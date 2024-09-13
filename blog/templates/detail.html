@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-  <h2 class = 'text-center mt-4'>--- Detail Article ---</h2>
-  <h3>{{article.title}}</h3>
-  <img src= "{{article.image.url}}">
-  <p> {{article.category}}</p>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-8">
+      <h2 class = 'text-center mt-4'>--- Detail Article ---</h2>
+      <img src= "{{article.image.url}}" style = "max-width: 580px">
+      <h3>{{article.title}}</h3>
+      <p> {{article.category}}</p>
+    </div>
+    <div class = "col-md-4">
+    <h2>Les articles en relations</h2>
+    </div>
+  </div>
+</div>
 {% endblock%}

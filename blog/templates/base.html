@@ -23,8 +23,10 @@
     <link rel="stylesheet" href="{% static 'css/mdb.min.css'%}" />
   </head>
   <body>
+    {% include 'navbar.html'%}
     {% block  content%}
     {% endblock  %}
+    {% include 'footer.html'%}
     <script type="text/javascript" src="{% static 'js/mdb.umd.min.js'%}"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
